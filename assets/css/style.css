@@ -1,6 +1,5 @@
 /**
-* Template Name: Bootslander
-* Updated: Mar 10 2023 with Bootstrap v5.2.3
+* Template Name: Bootslander - v4.8.2
 * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
@@ -57,7 +56,18 @@ h6 {
   border-radius: 50%;
   width: 60px;
   height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
   animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes animate-preloader {
@@ -479,6 +489,7 @@ h6 {
   }
 
   #hero .animated {
+    -webkit-animation: none;
     animation: none;
   }
 
@@ -509,6 +520,16 @@ h6 {
   }
 }
 
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
 @keyframes up-down {
   0% {
     transform: translateY(10px);
@@ -529,18 +550,34 @@ h6 {
 }
 
 .wave1 use {
+  -webkit-animation: move-forever1 10s linear infinite;
   animation: move-forever1 10s linear infinite;
+  -webkit-animation-delay: -2s;
   animation-delay: -2s;
 }
 
 .wave2 use {
+  -webkit-animation: move-forever2 8s linear infinite;
   animation: move-forever2 8s linear infinite;
+  -webkit-animation-delay: -2s;
   animation-delay: -2s;
 }
 
 .wave3 use {
+  -webkit-animation: move-forever3 6s linear infinite;
   animation: move-forever3 6s linear infinite;
+  -webkit-animation-delay: -2s;
   animation-delay: -2s;
+}
+
+@-webkit-keyframes move-forever1 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+
+  100% {
+    transform: translate(-90px, 0%);
+  }
 }
 
 @keyframes move-forever1 {
@@ -553,7 +590,27 @@ h6 {
   }
 }
 
+@-webkit-keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
 @keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+@-webkit-keyframes move-forever3 {
   0% {
     transform: translate(-90px, 0%);
   }
@@ -786,10 +843,15 @@ section {
   position: absolute;
   width: 120px;
   height: 120px;
+  -webkit-animation-delay: 0s;
   animation-delay: 0s;
+  -webkit-animation: pulsate-btn 2s;
   animation: pulsate-btn 2s;
+  -webkit-animation-direction: forwards;
   animation-direction: forwards;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps;
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
@@ -817,8 +879,21 @@ section {
   border-bottom: 10px solid transparent;
   border-left: 15px solid #fff;
   z-index: 200;
+  -webkit-animation: none;
   animation: none;
   border-radius: 0;
+}
+
+@-webkit-keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
 }
 
 @keyframes pulsate-btn {
@@ -1446,6 +1521,7 @@ section {
   margin: 0 10px -6px 0;
   border: 3px solid #18d26e;
   border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
 }
 
@@ -1475,6 +1551,16 @@ section {
 
 .contact .php-email-form button[type=submit]:hover {
   background: #34e5a6;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes animate-loading {
